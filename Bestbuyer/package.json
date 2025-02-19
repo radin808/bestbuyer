@@ -1,0 +1,39 @@
+{
+    "name": "bestbuyer-merged",
+    "version": "1.0.0",
+    "scripts": {
+      // Runs your Node/Express server (uses nodemon for auto-restart)
+      "server": "nodemon server/index.js",
+      
+      // Starts the React dev server from the client folder
+      "client": "cd client && react-scripts start",
+      
+      // Run both server & client at the same time
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      
+      // Build the React app for production
+      "build": "cd client && react-scripts build"
+    },
+    "dependencies": {
+      // ----- Server Dependencies -----
+      "express": "^4.18.2",
+      "mongoose": "^6.8.0",
+      "cors": "^2.8.5",
+      "dotenv": "^16.3.1",
+      "stripe": "^11.15.0",
+      "bcrypt": "^5.1.0",
+      "jsonwebtoken": "^9.0.0",
+  
+      // ----- Client (React) Dependencies -----
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.8.0",
+      "axios": "^1.3.4",
+      "react-scripts": "5.0.1",
+  
+      // ----- Shared or Utility Dependencies -----
+      "concurrently": "^7.0.0",
+      "nodemon": "^2.0.22"
+    }
+  }
+  
